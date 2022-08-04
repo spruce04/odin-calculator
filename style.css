@@ -15,6 +15,7 @@ html, body {
 }
 
 .header {
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,5 +27,30 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.calculatorWrap {
     margin-top: auto;
+    margin-bottom: auto;
+}
+
+.display {
+    background-color: #D3D3D3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    
+}
+
+button {
+    height: 80px;
+    width: 80px;
+    border: 1px solid black;
+    margin: 2px;
 }
