@@ -29,7 +29,7 @@ let result;
 
 //basic operator functions
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 }
 
 function subtract(a, b) {
