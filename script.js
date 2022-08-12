@@ -26,6 +26,7 @@ let divideBool = false;
 let firstNum;
 let secondNum;
 let result;
+const operators = ['+', '-','/', '*'];
 
 //basic operator functions
 function add(a, b) {
@@ -53,11 +54,17 @@ function backspace() {
     if (display.length == 0)  {
         return;
     }
-    else {
-        let displayNew = display.slice(0, -1);
-        display = displayNew;
+    else {   
+        display = display.slice(0, -1);
+        let opCheck = false;
+        // check if an operator got deleted
+        for(let i = 0; i < operators.length; i++) {
+            if (display.indexOf(operators[i]) != -1) { 
+                opCheck = true;
+            }
+        }
         calcDisplay.textContent = display;
-        if (display.indexOf('/') && display.indexOf('+') && display.indexOf('*') && display.indexOf('-')) {
+        if (opCheck == false) {
             addBool = false;
             minusBool = false;
             multiplyBool = false;
